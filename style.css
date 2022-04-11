@@ -2,8 +2,7 @@
   box-sizing: border-box;
 }
 
-body,
-html {
+body {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -18,9 +17,45 @@ li {
 }
 
 .wrapper {
-  min-height: 100%;
+  min-height: 100vh;
   overflow: hidden;
-  background: linear-gradient(to right, red 30%, black 30%, black 70%);
-  font-family: 'Poppins', sans-serif;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.fullscrean {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.fullscrean:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 2;
+}
+
+.fullscrean__title {
+  position: absolute;
+  z-index: 30;
+  font-size: 300px;
+  color: white;
+}
+
+.movies {
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
